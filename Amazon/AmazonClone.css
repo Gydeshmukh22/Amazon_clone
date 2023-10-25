@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 5px;
+    background-color: #0f1111;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 4px;
+    position: sticky;
+    top: 0;
+
+    z-index: 5555;
+}
+
+.headerData>img {
+    width: 150px;
+}
+
+.headerData {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: whitesmoke;
+    padding: 7px;
+    border: 1px solid #0f1111;
+    border-radius: 4px;
+}
+
+.headerData:hover {
+    border-color: white;
+    cursor: pointer;
+}
+
+.headerText {
+    display: flex;
+    flex-direction: column;
+}
+
+.headerText>p {
+    font-size: 14px;
+    font-weight: 500px;
+    color: lightgrey;
+}
+
+.headerText>h3 {
+    font-size: 18px;
+    font-weight: 700px;
+    color: white;
+}
+
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid gray;
+    /* border-radius: 5px; */
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.searchBar>input {
+    height: 40px;
+    font-size: 20px;
+    padding-left: 20px;
+    width: 300px;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #232f3e;
+    padding: 6px;
+
+    position: sticky;
+    top: 65px;
+    z-index: 9998;
+}
+
+nav>p {
+    color: white;
+    font-size: 16px;
+    font-weight: 500px;
+    padding: 7px;
+    border: 1px solid #232f3e;
+}
+
+nav>p:hover {
+    border-radius: 5px;
+    border-color: white;
+    cursor: pointer;
+}
+
+/* products design */
+.oneProduct {
+    border: 1px solid lightgray;
+    width: 220px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(223, 238, 243);
+}
+
+.oneProduct>img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    /* for img in center ke liye */
+    display: block;
+    margin: auto;
+
+}
+
+.oneProduct>p {
+    font-size: 14px;
+    font-weight: 500px;
+    color: orange;
+    text-align: right;
+    margin: 5px;
+}
+
+.oneProduct>h1 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700px;
+    color: darkorange;
+    margin: 10px;
+}
+
+.oneProduct>button {
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: darkorange;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.oneProduct>button:hover {
+    cursor: pointer;
+    background-color: wheat;
+    color: whitesmoke;
+    border: 1px solid orange;
+    transition: all 1s;
+}
+
+.ratingandprice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ratingandprice>h1 {
+    font-size: 30px;
+    font-weight: 700px;
+    color: orange;
+    margin: 10px;
+}
+
+.ratingandprice>h3 {
+    font-size: 15px;
+    font-weight: 500px;
+    color: gray;
+}
+
+.oneProduct>h2 {
+    font-size: 22px;
+    font-weight: 600px;
+    color: black;
+    text-align: center;
+    margin: 10px;
+}
+
+.oneProduct>h4 {
+    font-size: 14px;
+    font-weight: 500px;
+    color: black;
+    margin-left: 10px;
+
+
+    height: 60px;
+    overflow: hidden;
+
+}
+
+.products {
+    /* used for responsive website */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 1060px;
+    margin: auto;
+}
+
+/* used for responsive website */
+@media(max-width: 1059px) {
+    .products {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: 800px;
+    }
+
+    .toHide {
+        display: none;
+    }
+}
+
+@media(max-width: 799px) {
+    .products {
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 530px;
+    }
+}
+
+@media(max-width: 529px) {
+    .products {
+        display: grid;
+        grid-template-columns: auto;
+        /*  */
+        width: 265px;
+    }
+}
+
+.AmazonImage>img {
+    width: 100%;
+    margin: auto;
+    display: block;
+    margin-bottom: -200px;
+}
+
+/* sign in page */
+.MainDiv {
+    /* border: 1px solid lightgray; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.MainDiv>h1 {
+    font-size: 40px;
+    font-weight: 700px;
+    color: orange;
+    margin: 10px;
+}
+
+.MainDiv>input[type='text'],
+[type='password'] {
+    width: 400px;
+    height: 50px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 500px;
+    margin-bottom: 20px;
+}
+
+.MainDiv>button {
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    font-size: 20px;
+    font-weight: 400px;
+    color: gray;
+    cursor: pointer;
+}
+
+.sidebar {
+    background-color: lightgrey;
+    position: fixed;
+    left: 0px;
+    height: 100vh;
+    overflow: scroll;
+
+    width: 400px;
+    z-index: 9999;
+
+    /* padding: 20px; */
+
+}
+
+.sidebar_top {
+    color: white;
+    font-weight: 370;
+    background-color: rgb(35, 47, 62);
+    padding: 15px 0 15px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+}
+
+.sidebar_top>p {
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar_top>p:hover {
+    text-decoration: underline;
+}
+
+.sidenavContentHeader {
+    margin-top: 5px;
+    padding: 15px 0 15px 25px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sidenavContent {
+    padding: 15px 0 15px 25px;
+}
+
+.sidenavContent:hover {
+    background-color: #eaeded;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    color: gray;
+    background-color: gray;
+    margin: 13px auto 10px auto;
+}
+
+.sideRow {
+    display: flex;
+    /* width: 87%; */
+    justify-content: space-between;
+    padding: 15px 25px 15px 25px;
+}
+
+.sideRow:hover {
+    background-color: #eaeded;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+#main-container {
+    /* position: relative; */
+    width: 100%;
+    /* height: 100vh; */
+    /* overflow-y: scroll; */
+    padding-bottom: 50px;
+}

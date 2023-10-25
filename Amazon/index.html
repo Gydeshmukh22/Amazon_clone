@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./AmazonClone.css">
+    <title>AmazonClone</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  
+</head>
+<body>
+    <script src="./AmazonClone.js"></script>
+    <!-- side bar -->
+<div class="sidebar" id="sidebar" style="display: none">
+    <div class="sidebar_top">
+        <i class="fa fa-user-circle" aria-hidden="true"> Hello, sign in </i>
+
+        <p onclick="handleCloseSidebar()">
+            <i class="fa fa-times" aria-hidden="true" style="padding-right: 20px"></i>
+        </p>
+    </div>
+    <div id="main-container">
+        <div class="sidenavContentHeader">Trending</div>
+        <a href="#">
+            <div class="sidenavContent">Best Sellers</div>
+        </a>
+        <a href="#">
+            <div class="sidenavContent">New Releases</div>
+        </a>
+        <a href="#">
+            <div class="sidenavContent">Movers and Shakers</div>
+        </a>
+        <hr />
+        <div class="sidenavContentHeader">Digital Content And Devices</div>
+        <a href="#">
+            <div class="sideRow">
+                <div>Amazon miniTV-FREE entertainment</div>
+                <!-- <i class="fa fa-angle-right" aria-hidden="true"></i> -->
+            </div>
+        </a>
+        <a href="#">
+            <div class="sideRow">
+                <div>Echo & Alexa</div>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="sideRow">
+                <div>Fire TV</div>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="sideRow">
+                <div>Kindle E-Readers & eBooks</div>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="sideRow">
+                <div>Audible Audiobooks</div>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="sideRow">
+                <div>Amazon Prime Video</div>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="sideRow">
+                <div>Amazon Prime Music</div>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+        </a>
+        <hr />
+        <div class="sidenavContentHeader">Shop By Category</div>
+        <a href="#">
+            <div class="sideRow">
+                <div>Mobiles, Computers</div>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="sideRow">
+                <div>TV, Appliances, Electronics</div>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="sideRow">
+                <div>Men's Fashion</div>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="sideRow">
+                <div>Women's Fashion</div>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+        </a>
+        <hr />
+
+        <a href="#">
+            <div class="sideRow">
+                <div>Gift Cards & Mobile Recharges</div>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="sidenavContentHeader">Programs & Features</div>
+            <div class="sideRow">
+                <div>Amazon Launchpad</div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="sideRow">
+                <div>Flight Tickets</div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="sideRow">
+                <div>Clearance store</div>
+            </div>
+        </a>
+        <hr />
+        <div class="sidenavContentHeader">Help & Settings</div>
+        <a href="#">
+            <div class="sideRow">
+                <div>Your Account</div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="sideRow">
+                <div>Customer Service</div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="sideRow">Sign in</div>
+        </a>
+    </div>
+</div>
+
+    <!-- header -->
+    <header>
+<!-- logo -->
+<div class="headerData">
+<img src="./amazon-logo-png_167642.png" alt="">
+</div>
+<!-- location -->
+<div class="headerData toHide">
+    <i class="fa fa-map-marker" 
+    style="color: white; font-size: 20px; margin-right: 7px;"
+     aria-hidden="true">
+    </i>
+
+    <div class="headerText">
+        <p>Deliver to Gyanavi</p>
+        <h3>Nagpur</h3>
+    </div>
+</div>
+
+<!-- search bar -->
+<div class="searchBar">
+    <input type="text" placeholder="search Amazon.in"/>
+    <i class="fa fa-search" 
+    style="color:black;
+     font-size: 20px; 
+     margin-left: 5px; 
+     padding: 10px;
+     background-color: orange;" 
+     aria-hidden="true"></i>
+</div>
+
+<!-- account -->
+<div class="headerData toHide">
+   
+    <div class="headerText">
+        <p>Hello Gyanavi</p>
+        <h3>Account & List</h3>
+    </div>
+    <i class="fa fa-caret-down" 
+    style="color: white; font-size: 20px; margin-left: 5px;"
+     aria-hidden="true"></i> 
+ </div>
+
+<!-- return and order -->
+<!-- anchor tag page ko redirect krne ke liye use hota hai -->
+<a href="./Signin.html">
+    <div class="headerData toHide">
+        <div class="headerText">
+            <!-- <p>Returns</p> -->
+            <h3>Logout</h3>
+        </div>
+    </div>
+</a>
+<!-- cart -->
+<div class="headerData toHide">
+<i  class="fa fa-shopping-cart" " aria-hidden="true"></i>
+</div>
+<!-- icon ka size bdhane ke liye font size ka use hota hai-->
+    </header>
+
+
+    <!-- navbar -->
+<nav>
+  <p onclick="handleOpenSidebar()" ><i class="fa fa-bars"></i>All</p>
+    <p>Mobile</p>
+    <p>AmazonPay</p>
+    <p>Beauty & Personal Care</p>
+    <p>Amozon MiniTv</p>
+    <p>Sell</p>
+</nav>
+    <!-- images -->
+<div class="AmazonImage">
+<img src="./amazonimage.jpg" alt="">
+</div>
+    <!-- product -->
+ <div class="products" id="Products">
+  
+ </div>
+
+</body>
+</html> 
